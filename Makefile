@@ -9,8 +9,11 @@ PIP := $(VENV)/bin/pip
 
 .DEFAULT_GOAL := run 
 
+pre:
+	sudo apt install python3-venv
+
 $(VENV)/bin/activate: requirements.txt
-	@python -m venv $(VENV)
+	@python3 -m venv $(VENV)
 	@chmod +x $(VENV)/bin/activate
 	@. $(VENV)/bin/activate && $(PIP) install -r requirements.txt
 
