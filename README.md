@@ -1,4 +1,4 @@
-Telegram bot + Todoist app
+# Telegram bot + Todoist app
 ----------------------------
 
 - OpenIA ? 
