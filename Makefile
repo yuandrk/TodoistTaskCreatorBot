@@ -7,7 +7,7 @@ PACKAGE_NAME := $(shell basename $(shell dirname $(realpath $(lastword $(MAKEFIL
 .DEFAULT_GOAL := help
 
 # UPDATE ME
-DOCKER_IMAGE = $(shell basename $(CURDIR))-$(shell git describe --tags --always)-$(shell git rev-parse --short HEAD)-$(ARCH)
+DOCKER_IMAGE = $(shell basename $(CURDIR))-$(shell git describe --tags --always)-$(ARCH)
 REGISTRY ?= ghcr.io/yuandrk
 MAIN_FILE = main.py
 KUBERNETES_DIR = kubernetes
@@ -114,7 +114,7 @@ build-cached-image:  ## Build cached docker image from local Dockerfile.
 	docker build  --build-arg ARCH=$(ARCH)  -f Dockerfile -t $(REGISTRY)/$(DOCKER_IMAGE) .
 
 push-image:
-	docker push $(DOCKER_IMAGE) 
+	docker push $(REGISTRY)/$(DOCKER_IMAGE) 
 
 dev-venv: venv ## Install the package in development mode including all dependencies inside a virtualenv (container).
 	@$(PYTHON_VENV) -m pip install .[dev];
