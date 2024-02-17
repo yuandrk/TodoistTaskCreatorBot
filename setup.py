@@ -1,14 +1,14 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="your_project_name",
-    version="0.1.0",  # Use semantic versioning https://semver.org/
-    author="Your Name",
-    author_email="your.email@example.com",
-    description="A brief description of your project",
+    name="teledoist",
+    version="0.0.1",  # Use semantic versioning https://semver.org/
+    author="Yuandrk",
+    author_email="yurii.andriuk@gmail.com",
+    description="Create Todoist tasks through Telegram bot",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/your_project_name",
+    url="https://github.com/yuandrk/teledoist",
     packages=find_packages(where="src"),  # Assuming your code is in src/ folder
     package_dir={"": "src"},  # Tell setuptools packages are under src
     install_requires=[
