@@ -8,6 +8,7 @@ PACKAGE_NAME := $(shell basename $(shell dirname $(realpath $(lastword $(MAKEFIL
 
 # UPDATE ME
 DOCKER_IMAGE = $(USER)/$(shell basename $(CURDIR))-$(shell git rev-parse --short HEAD)-$(ARCH)
+REGISTRY ?= ghcr.io
 MAIN_FILE = main.py
 KUBERNETES_DIR = kubernetes
 DOCS_DIR = docs/src
@@ -107,10 +108,13 @@ boilerplate:  ## Add simple 'README.md' and .gitignore
 bootstrap: clean install-hooks dev docs ## Installs development packages, hooks and generate docs for development
 
 build-image:  ## Build docker image from local Dockerfile.
-	docker build  --build-arg ARCH=$(ARCH) -f Dockerfile --no-cache -t $(DOCKER_IMAGE) .
+	docker build  --build-arg ARCH=$(ARCH) -f Dockerfile --no-cache -t $(REGISTRY)/$(DOCKER_IMAGE) .
 
 build-cached-image:  ## Build cached docker image from local Dockerfile.
-	docker build  --build-arg ARCH=$(ARCH)  -f Dockerfile -t $(DOCKER_IMAGE) .
+	docker build  --build-arg ARCH=$(ARCH)  -f Dockerfile -t $(REGISTRY)/$(DOCKER_IMAGE) .
+
+push-image:
+	docker push $(REGISTRY)/$(DOCKER_IMAGE) 
 
 dev-venv: venv ## Install the package in development mode including all dependencies inside a virtualenv (container).
 	@$(PYTHON_VENV) -m pip install .[dev];
