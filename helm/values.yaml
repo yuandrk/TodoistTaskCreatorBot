@@ -1,0 +1,14 @@
+replicaCount: 1
+image:
+  registry: "ghcr.io"
+  repository: "yuandrk"
+  container: "teledoist"
+  tag: "0.0.1-0011297"
+  os: "linux"
+  arch: "arm64"
+secret:
+  name: "TELE_TOKEN"
+  tokenKey: "token"
+  tokenName: "todoist"
+securityContext:
+  privileged: true
