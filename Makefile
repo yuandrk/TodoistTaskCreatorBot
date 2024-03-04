@@ -15,12 +15,17 @@ TARGETARCH ?= amd64
 PYTHON := $(shell which python3)
 
 
-
-setup-system:
-	@sudo apt-get update && sudo apt-get install -y python3-venv python3-pip
+setup-system: 
+	@sudo apt-get update && sudo apt-get install -y python3-venv python3-pi
 
 test: 
 	@echo Using Python at: $(PYTHON)
+
+build-image: 
+	@docker build . --build-arg ARCH=$(TARGETARCH) -t $(REGISTRY)/$(APP):$(VERSION)-$(TARGETARCH)
+
+push-image:
+	@docker push $(REGISTRY)/$(APP):$(VERSION)-$(TARGETARCH)
 
 # Ensures the virtual environment is only created if it doesn't exist or requirements.txt is updated
 $(VENV)/.venv_stamp: requirements.txt
