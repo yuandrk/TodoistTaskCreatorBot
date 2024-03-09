@@ -11,7 +11,7 @@ on:
 
 jobs:
       push-store-image:
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
         steps:
           - name: 'Checkout GitHub Action'
             uses: actions/checkout@main
@@ -34,7 +34,7 @@ jobs:
         name: CD
         needs: push-store-image
         if: github.actor != 'github-actions[bot]' # Prevents loop by ignoring commits from GitHub Actions bot
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
     
         steps:
         - uses: actions/checkout@v3
