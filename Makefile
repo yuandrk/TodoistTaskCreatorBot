@@ -11,7 +11,7 @@ APP=$(shell basename -s .git $(shell git remote get-url origin))
 VENV := $(shell basename -s .git $(shell git remote get-url origin)_venv)
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 TARGETOS ?= linux
-TARGETARCH ?= amd64
+TARGETARCH ?= arm64
 PYTHON := $(shell which python3)
 
 
