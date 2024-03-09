@@ -1,7 +1,7 @@
 # argument from makefile to set type of arch
 ARG ARCH
 
-FROM ${ARCH}/python:3.13-rc-slim
+FROM ${ARCH}v8/python:3.13-rc-slim
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
