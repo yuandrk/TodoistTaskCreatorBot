@@ -22,10 +22,10 @@ test:
 	@echo Using Python at: $(PYTHON)
 
 build-image: 
-	@docker build . --build-arg ARCH=$(TARGETARCH) -t $(REGISTRY)/$(APP):$(VERSION)-$(TARGETARCH)
+	@docker build . --build-arg ARCH=$(TARGETARCH) -t $(REGISTRY)/$(APP):$(VERSION)-$(TARGETOS)-$(TARGETARCH)
 
 push-image:
-	@docker push $(REGISTRY)/$(APP):$(VERSION)-$(TARGETARCH)
+	@docker push $(REGISTRY)/$(APP):$(VERSION)-$(TARGETOS)-$(TARGETARCH)
 
 # Ensures the virtual environment is only created if it doesn't exist or requirements.txt is updated
 $(VENV)/.venv_stamp: requirements.txt
