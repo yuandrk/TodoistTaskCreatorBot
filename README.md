@@ -16,3 +16,5 @@ docker run -it -e TODOIST_TOKEN -e TELE_TOKEN <docker image>
 
 --------------------------
 
+manual build 
+``` docker build --build-arg ARCH=arm64 -t name of container . ```

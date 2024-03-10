@@ -18,4 +18,4 @@ ENV TODOIST_TOKEN=${TODOIST_TOKEN:-default_value}
 ENV TELE_TOKEN=${TELE_TOKEN:-default_value}
 
 # Run app.py when the container launches
-CMD ["python", ".src/main.py"]
+CMD ["python", "src/main.py"]
