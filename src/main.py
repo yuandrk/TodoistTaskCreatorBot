@@ -36,7 +36,7 @@ def handle_message(message):
     if task:
         reply_message = f"Task is created: {task.content}"
     else:
-        reply_message = "Problem with creat task in Todoist"
+        reply_message = "Problem with creat task"
     bot.reply_to(message, reply_message)
 
 
