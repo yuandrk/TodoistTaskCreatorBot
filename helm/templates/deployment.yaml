@@ -46,3 +46,8 @@ spec:
               secretKeyRef:
                 key: tokenKey
                 name: {{ .Values.secret.tokenName}}
+          - name: {{ .Values.todoistSecret.name}}
+            valueFrom:
+              secretKeyRef:
+                key: tokenKey
+                name: {{ .Values.secret.tokenValue}}
