@@ -6,7 +6,7 @@ import telebot
 
 # Get tokens from environment variables
 TELEGRAM_BOT_TOKEN = os.getenv("TELE_TOKEN")
-TODOIST_API_KEY = os.getenv("TODOIST_TOKEN")
+TODOIST_API_KEY = os.getenv("todoist_token") 
 
 bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
 todoist_api = TodoistAPI(TODOIST_API_KEY)
