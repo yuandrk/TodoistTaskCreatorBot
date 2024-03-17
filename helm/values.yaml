@@ -7,12 +7,12 @@ image:
   os: "linux"
   arch: "arm64"
 secret:
-  name: "TELE_TOKEN"
+  name: "teletoken"
   tokenKey: "token"
-  tokenName: "todoist"
+  tokenName: "telegramtoken"
 securityContext:
   privileged: true
 todoistsecret:
   name: "todoisttoken"
   tokenKey: "apiToken"
-  tokenName: "apitoken"
+  tokenName: "apitokentodoist"
