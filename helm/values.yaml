@@ -14,5 +14,5 @@ securityContext:
   privileged: true
 todoistsecret:
   name: "todoisttoken"
-  tokenKey: "apiToken"
-  tokenName: "apitokentodoist"
+  tokenKey: "token"
+  tokenName: "todoisttoken"
