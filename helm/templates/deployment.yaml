@@ -50,4 +50,4 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: {{ .Values.todoistsecret.name }}
-                key: {{ .Values.todoistsecret.tokenKey }}
+                key: tokenKey
