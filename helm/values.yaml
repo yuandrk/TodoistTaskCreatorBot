@@ -13,6 +13,6 @@ secret:
 securityContext:
   privileged: true
 todoistsecret:
-  name: "todoist_token"
+  name: "todoisttoken"
   tokenKey: "apiToken"
   tokenName: "apitoken"
