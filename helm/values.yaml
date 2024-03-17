@@ -15,4 +15,4 @@ securityContext:
 todoistsecret:
   name: "apitodoist"
   tokenKey: "apiToken"
-  tokenValue: "api-token"
+  tokenValue: "apitoken"
