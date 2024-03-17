@@ -3,7 +3,7 @@ image:
   registry: "ghcr.io"
   repository: "yuandrk"
   container: "teledoist"
-  tag: "0.0.2-08cd5ab"
+  tag: "0.0.2-6fe9106"
   os: "linux"
   arch: "arm64"
 secret:
@@ -15,4 +15,4 @@ securityContext:
 todoistSecret:
   name: "apiTodoist"
   tokenKey: "apiToken"
-  tokenValue: "api-token" 
+  tokenValue: "api-token"
