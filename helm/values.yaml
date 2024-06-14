@@ -3,7 +3,7 @@ image:
   registry: "ghcr.io"
   repository: "yuandrk"
   container: "teledoist"
-  tag: "0.0.2-e5ac9f7"
+  tag: "0.0.2-aa95fd4"
   os: "linux"
   arch: "arm64"
 secret:
