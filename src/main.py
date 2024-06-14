@@ -22,7 +22,7 @@ def create_todoist_task(content):
         The response from Todoist API if successful, None otherwise.
     """
     try:
-        task = todoist_api.add_task(content=content, due_string="Monday" )
+        task = todoist_api.add_task(content=content, due_string="Monday", labels="Links"  )
         return task  # The add_task method returns a Task object if successful
     except Exception as error:
         print(f"Error creating task in Todoist: {error}")
