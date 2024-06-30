@@ -1,9 +1,9 @@
-replicaCount: 1
+replicaCount: 2
 image:
   registry: "ghcr.io"
   repository: "yuandrk"
   container: "teledoist"
-  tag: "0.0.2-a4acfe8"
+  tag: "0.0.2-889ba76"
   os: "linux"
   arch: "arm64"
 secret:
