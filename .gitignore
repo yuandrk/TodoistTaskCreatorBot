@@ -259,3 +259,5 @@ pip-selfcheck.json
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/venv,python,JupyterNotebooks,SublimeText,VisualStudioCode,vagrant
+.DS_Store
+.DS_Store
